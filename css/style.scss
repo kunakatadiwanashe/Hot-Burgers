@@ -1,0 +1,773 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Montserrat-Regular';
+	vertical-align: baseline;
+	text-transform: capitalize;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{scroll-behavior: smooth;}
+@font-face {
+	font-family: 'Avengeance';
+	font-style: normal;
+	src: url("../fonts/AVENGEANCE\ MIGHTIEST\ AVENGER.ttf");
+  }
+
+  @font-face {
+	font-family: 'Montserrat-Bold';
+	font-style: normal;
+	src: url("../fonts/Montserrat-Bold.ttf");
+  }
+  @font-face {
+	font-family: 'Montserrat-ExtraLight';
+	font-style: normal;
+	src: url("../fonts/montserrat-ultralight.otf");
+  }
+  @font-face {
+	font-family: 'Montserrat-Regular';
+	font-style: normal;
+	src: url("../fonts/Montserrat-Regular.ttf");
+  }
+
+
+
+  @font-face {
+	font-family: 'Montserrat-SemiBold';
+	font-style: normal;
+	src: url("../fonts/Montserrat-SemiBold.ttf");
+  }
+
+
+  @font-face {
+	font-family: 'Poppins-Bold';
+	font-style: normal;
+	src: url("../fonts/Poppins-Bold.ttf");
+  }
+
+  @font-face {
+	font-family: 'SourceSansPro-Light';
+	font-style: normal;
+	src: url("../fonts/SourceSansPro-Light.ttf");
+  }
+
+  @font-face {
+	font-family: 'SourceSansPro-SemiBold';
+	font-style: normal;
+	src: url("../fonts/SourceSansPro-SemiBold.ttf");
+  }
+
+@mixin center {display: flex;flex-wrap: wrap;;justify-content: centera;align-items: center;}
+	
+
+body{margin-top: 0;padding: 0;padding-top: 0px;}
+
+.humbuger-menu{
+	background:transparentize($color:#FFAA00, $amount: 0);padding: 3px;;box-shadow: 1px 1px 4px 0 black;width: 100%;z-index: 3;position: absolute;top: 0px;
+    ul{list-style: none;overflow: hidden;
+	  a{display: block;text-decoration: none;padding: 20px;color: white;}
+	  .tags{display: flex;}
+    
+     }
+    
+    
+	
+	 .logo{width: 100px;height: 50px;padding-left: 10px;object-fit: contain;}
+     .menu{clear: both;max-height: 0;transition: max-height .2s ease-out;}
+    .menu-icon{padding: 20px 15px;border: 2px solid white;position: relative;float: right;cursor: pointer;;
+        .nav-icon{background: #fff;display: block;height: 2px;width: 18px;position: relative;transition: background .2s ease-out;}
+        .nav-icon:before{background: #fff;content: "";display: block;width: 100%;height: 100%;position: absolute;top: 5px;transition: all .2s ease-out;}
+        .nav-icon:after{background: #fff;content: "";display: block;width: 100%;height: 100%;position: absolute;top: -5px;transition: all .2s ease-out;}
+       }
+    
+       .menu-btn{display: none;}
+       .menu-btn:checked ~.menu{max-height: 240px;}
+       .menu-btn:checked ~.menu-icon .nav-icon{background-color: transparent ;}
+       .menu-btn:checked ~.menu-icon .nav-icon:before{transform: rotate(-45deg);top: 0;}
+       .menu-btn:checked ~.menu-icon .nav-icon:after{transform: rotate(45deg);top: 0;}
+      
+    
+    }
+
+
+.scroll{width: 20px;height: 20px;position: absolute;top: 70%;left: 50%;transform: translate(-50% ,-50%);;z-index: 100;}
+.regular {width: 100%;height: 450px; overflow-y: hidden;  overflow-x: hidden;    margin-top: -20px;
+    
+	.banner{height: 450px;width: 100%;position: relative;
+		img{width: 100%;height:100%;object-fit: cover;}
+		header{position: absolute;color: white;top: 0;display: flex;
+		.logo{display: none;}
+
+		 .nav{display: none;
+		
+		}
+		 
+		 #seach{width: 40px;height: 20px;;background-image: url(/img/seach.png);background-repeat: no-repeat;background-position: center;background-size: contain;;
+		input{border: none;background: transparent;color: white;}
+		}
+		}
+		
+		.banner-info{position: absolute;color: white;top: 120px;width: 100%;text-align: center;;
+		 img{display: none;;}
+		  h1{font-size: 50px;font-family: 'Avengeance Mightiest Avenger';z-index: 10;}
+         
+		  p{position: absolute;font-size: 20px;font-family: 'Montserrat-Bold';height: 132px;width: 100%;z-index: 100;padding-top: 20px;;
+		   span{font-size: 20px;font-family: 'Montserrat-Bold';display: block;}
+		 }
+		  a{background-color: #FFAA00;color: white;width: 170px;height: 35px;@include center();position: relative;;border-radius: 50px;text-decoration: none;padding-left: 25px;margin: 0 auto;margin-top: 100px;;
+		   #arrow{width: 15px;height: 20px;position: absolute;top: 17px;left: 120px;}
+		}
+		
+	}
+	.bottom{bottom: -20;}
+	.bottom{width: 100%;height: 61px;position: absolute;}
+	}
+}
+
+
+.slick-slide img {width: 100%;height: 100%;z-index: 1;}
+.slick-next:before {color:white;font-size: 20px;position: absolute;	left: -140px;top: 150px;}
+.slick-prev:before{position: absolute;color:rgb(255, 255, 255);left:140px;top: 150px;font-size:20px;}
+.slick-prev{display: block !important;position: relative;z-index:700;}
+
+
+.want-to-eat{text-align: center;padding: 20px 15px 150px 15px;;;
+	  h2{font-size: 30px;padding-bottom: 13px;font-family: 'Avengeance';}
+	  .brush{margin-bottom: 14px;width: 50%;height: 13px;}
+	  p{font-size: 20px;font-family: 'Montserrat-ExtraLight';margin-bottom: 60px;}
+
+	  .container{@include center();justify-content: center;;;
+		  .inner{width: 248px;height: 236px;box-shadow: 1px 3px 2px 2px rgb(170, 170, 170);padding: 20px;margin-bottom: 30px;;
+			  p{font-family: 'Montserrat-Regular';font-size:18px ;margin-top:20px;}
+			  img{width: 100px;height: 100px;}
+		  }
+
+		  
+	  }
+  }
+
+.specials{height: 300px;background-image: url(/img/specials.png);background-repeat: no-repeat;background-size: cover;background-position: center;;color: white;@include center();position: relative;;
+	img{width: 100%;position: absolute;top: -12px;}
+	#bottom{position: absolute;bottom: 5px;}
+.countdown-main{text-align: center;
+	h1{font-size: 30px;font-family: 'Avengeance';}
+	p{font-size: 18px;font-family: 'Montserrat-ExtraLight';padding-bottom: 5px;}
+	p:last-of-type{padding-bottom: 27px;}
+
+	.countdown{margin-left: 40px;
+		.timer{text-align: left;;
+			span{background-color: #FFAA00;@include center();justify-content: center;height: 40px;width: 40px;font-size: 16px;font-family: 'Avengeance';}
+			p{height: 85px;width: 70px;font-size: 10px;font-family: 'Avengeance';padding-top: 8px;}
+			
+		}
+	}
+}
+
+}  
+
+.delivery{position: relative;background-color: #FFAA00;height: 500px;text-align: center;;;
+ .top,.bottom{width: 100%;height: 40px;position: absolute;left: 0;}
+ .top{top: -20;}
+ .bottom{bottom: -2;;}
+ .center{display: none;;}
+ .man{width: 250px;height: 200px;object-fit: contain;margin-top: 15px;}
+ h3{font-size: 30px;font-family: 'Avengeance';color: white;padding-top: 20px;;;
+   span{display: block;}
+}
+p{font-size: 18px;width: 100%;color: white;padding-bottom: 20px;}
+ 
+}
+
+
+.recipes{padding-top: 50px;
+	.container{
+		.row{
+			.col-md-4{
+				.card{width: 100%;border: none;box-shadow: 2px 4px 6px rgb(207, 207, 207);margin-bottom: 50px;border-radius: 20px 20px 0 0;
+					
+					img{height: 230px;object-fit: cover;border-radius: 20px 20px 0 0;;position: relative;}
+					.shape{position: absolute;;height: 10px;top: 220px;width: 100%;}
+
+
+					.info{display: flex;flex-wrap: wrap;padding:15px;;
+						img{width: 21px;height: 20px;}
+						span{margin-left: 30px;}
+						h4{width: 100%;font-size: 22px;margin: 16px 0 12px 0;}
+						p{width: 100%;padding-bottom: 30px;font-size: 16px;font-family: 'Montserrat-ExtraLight';}
+
+						.price{width: 190px;padding-top: 10px;font-size: 22px;font-family: 'Avengeance Mightiest Avenger';}
+					  a{width: 150px;height: 40px;color: white;background-color: #FFAA00;border-radius: 50px;@include center();padding-left: 20px;;
+					  
+					  span{font-size: 12px;margin-left: 10px;;}
+					}
+					span{font-size: 22px;font-family: 'Montserrat-ExtraLight'}
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+.testimonials{text-align: center;padding-top: 107px;overflow-x: hidden;padding-bottom: 90px;;
+	h3{font-size: 40px;font-family: 'Avengeance';color: #A80E0E;}
+	.brush{margin-bottom: 14px;width: 377px;height: 13px;}
+	p{padding-bottom: 80px;font-size: 20px;}
+	.inner{text-align: left;position: relative;display: flex;flex-wrap: wrap;text-align: center;;
+		.red{width: 250px;height: 100px;position: absolute;bottom: -40px;z-index: -1;display: flex;;justify-content: left;;}
+		
+		.woman{width: 300px;height: 250px;object-fit: contain;}
+
+		.info{padding-top: 60px;
+			img{width: 20px;height: 20px;margin-bottom: 20px;}
+			p{font-size: 20px;font-family: 'Montserrat-ExtraLight';padding-bottom: 53px;}
+			h4{display: flex;width: 340px;padding-bottom: 10px;font-size: 25px;justify-content: space-between;;
+			 .line{width: 58px;height: 2px;;background-color: #A80E0E;}
+			}
+			span{font-size: 16px;font-family: 'Montserrat-ExtraLight';}
+		}
+	}
+}
+
+
+.services{background-color: #FFAA00;position: relative;padding: 87px 0 50px 0;;;
+	.brush{position: absolute;height: 71px;top: -15px;width: 100%;}
+	.container{
+		.row{
+			.col-md-3{
+				.card{height: 316px;text-align: center;padding: 36px 15px 0 15px;border-radius: 8px;border: none;margin-bottom: 20px;;
+					img{width: 66px;height: 73px;margin: 0 auto;}
+					h4{padding: 13px 0 18px 0;font-size: 20px;}
+					#line{width: 70px;height: 3px;background-color: #FFAA00;margin: 0 auto;}
+					p{font-size: 16px;font-family: 'Montserrat-ExtraLight';text-transform: lowercase;padding-top: 16px;}
+					
+				}
+			}
+		}
+	}
+
+}
+
+
+.contacts{display: flex;flex-wrap: wrap;position: relative;;
+	.inner{background-color: #A80E0E;color: white;padding-bottom: 40px;;padding-left: 0px;padding-top: 50px;width: 100%;padding-left: 15px;;
+	font-family: 'Montserrat-ExtraLight';
+		.call{padding: 10px 25px 10px 25px ;background-color: #FFAA00;border-radius: 50px;font-size: 16px;font-family: 'Montserrat-ExtraLight';margin-left: 15px;}
+		h3{font-size: 30px;font-family: 'Avengeance';padding: 15px;}
+		.day{height: 70px;display: flex;flex: wrap;align-items: center;;width: 100%;;
+			img{width: 40px;height: 40px;}
+			p{padding-left: 10px;}
+			span{display: block;padding-top: 5px;}
+		}
+		#day{padding-bottom: 29px;border-bottom: 1px solid rgba(255, 255, 255, 0.212);margin-bottom: 30px;}
+
+		.icons{width: 211px;;display: flex;justify-content: space-between;padding-top: 50px;;
+		  a{background-color: white;width: 40px;height: 40px;@include center();justify-content: center;border-radius: 5px;;;
+		   img{width: 20px;height: 20px;}
+		}
+		}
+
+	}
+	.map{width: 100%;height: auto;}
+	#location{position: absolute;width: 40px;height: 50px;top: 77%;right: 125px;;}
+	#logo{position: absolute;width: 30px;height: 30px;top: 78%;right: 135px;}
+}
+
+
+footer{padding-top: 98px;
+	.container{
+		.row{
+			h4{color: #A80E0E;font-size: 20px;font-family: 'Avengeance';padding-bottom: 30px;}
+			hr{width:50px;background-color: #FFAA00;height: 3px;position: absolute;top: 20px;left: 10px;}
+			.col-md-5{
+				.inner{display: flex;flex-wrap: wrap;;;
+					.logo{width: 149px;height: 103px;margin-bottom: 32px;}
+					p{font-size: 16px;padding-bottom: 16px;;}
+					#logs{width: 49px;height: 49px;margin-right: 10px;}
+
+				}
+			}
+			.col-md-3{
+				
+				.links{display: flex;flex-wrap: wrap;justify-content: space-between;position: relative;;;
+					h4{width: 100%;}
+					// hr{position: absolute;}
+					.inner{width: 100px;display: flex;flex-direction: column;;
+					 a{font-size: 16px;color: #686868;font-family: '';}
+					}
+					
+				}
+			}
+			.col-md-4{
+			 .gallary{display: flex;flex-wrap: wrap;justify-content: space-between;position: relative;;
+				hr{top: -33;}
+			   img{width: 100px;height: 93px;border-radius: 15px;margin-bottom: 40px;;}
+			}
+			}
+		}
+	}
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+.scroll{top: 95%;}
+.testimonials{text-align: center;
+		
+	.brush{margin-bottom: 14px;}
+	p{padding-bottom: 30px;}
+	.inner{text-align: left;position: relative;display: flex;flex-wrap: wrap;text-align: center;;
+		.red{width: 290px;height: 120px;bottom: -30px;left: 80px;}
+		
+		.woman{width: 380px;height: 300px;object-fit: contain;}
+
+		.info{padding-top: 20px;text-align: left;
+		
+			p{padding-bottom: 25px;}
+			
+		}
+	}
+}
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+	
+	
+	
+	.slick-next:before {font-size: 25px;left: -90px;top: 50px;}
+	.slick-prev:before{left: 90px;top: 50px;font-size:25px;}
+
+	
+	
+	.want-to-eat{
+	 .container{justify-content: space-evenly;  
+		  }
+	  }
+	
+	 
+	
+
+	.delivery{height: 500px;display: flex;;
+		
+		.center{display: list-item;position: absolute;height: 130px;width: 410px;right: 0;top: 210px;}
+		.man{width: 450px;height: 400px;}
+		h3{position: absolute;top: 150px;left: 55%;
+		  span{display: block;}
+	   }
+	   p{position: absolute;top: 250px;width: 300px;left: 55%;}
+		
+	   }
+	   
+	
+	.recipes{
+		.container{
+			.row{
+				.col-md-4{
+					.card{
+						
+						img{height: 150px;}
+						.shape{top: 140px;width: 100%;}
+	
+	
+						.info{
+						
+						  a{width: 150px;height: 30px;;
+						  img{width: 30px;height: 25px;object-fit: contain;padding-left: 20px;}
+						  span{font-size: 12px;}
+						}
+						span{font-size: 20px;margin-top: 10px;margin: 0 auto;}
+						}
+					}
+				}
+	
+				
+			}
+		}
+	}
+	
+	
+	.testimonials{text-align: center;
+		
+		.brush{margin-bottom: 14px;}
+		
+		.inner{text-align: left;position: relative;display: flex;flex-wrap: wrap;text-align: center;;
+			.red{width: 290px;height: 120px;bottom: 0px;}
+			
+			.woman{width: 380px;height: 320px;object-fit: contain;}
+	
+			.info{padding-top: 20px;text-align: left;
+			
+				p{padding-bottom: 25px;}
+				
+			}
+		}
+	}
+	
+	
+	.services{
+		.brush{position: absolute;height: 71px;top: -15px;width: 100%;}
+		.container{
+			.row{
+				.col-md-3{
+					.card{height: 316px;padding: 15px;;;
+						
+						
+					}
+				}
+			}
+		}
+	
+	}
+	
+	.contacts{
+		.inner{display: flex;flex-wrap: wrap;;
+			h3{width: 100%;}
+			.day{display: flex;flex: wrap;width: 50%;padding-bottom: 29px;border-bottom: 1px solid rgba(255, 255, 255, 0.212);}
+			.icons{margin: 0 auto;}	
+		}
+		
+		#location{position: absolute;width: 40px;height: 50px;top: 67%;right: 330px;;}
+		#logo{position: absolute;width: 30px;height: 30px;top: 68%;right: 340px;}
+	}
+	
+	footer{padding-top: 60px;
+		.container{
+			.row{
+				
+				.col-md-5{
+					.inner{display: flex;flex-wrap: wrap;;;
+						.logo{width: 149px;height: 103px;margin-bottom: 32px;}
+						p{font-size: 16px;padding-bottom: 16px;;}
+						#logs{width: 60px;height: 49px;margin-right: 15px;}
+	
+					}
+				}
+				
+				
+			}
+		}
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+	.humbuger-menu{display: none;}
+	.scroll{width: 62px;height: 54px;position: absolute;top: 85%;left: 50%;;z-index: 100;}
+.regular {width: 100%;height: 800px; overflow-y: hidden;  overflow-x: hidden;;
+    
+	.banner{height: 800px;position: relative;
+		img{width: 100%;height:100%;}
+		header{position: absolute;color: white;top: 0;display: flex;;;
+		 .logo{display: list-item;;width: 212px;height: 146px;margin-right: 320px;padding-left: 90px;padding-top: 50px;}
+
+		 .nav{margin-left: auto;width: 1000px;height: 90px;display: flex;justify-content: center;align-items: center;background-color: transparentize($color: black, $amount: .9);;;
+		   li{padding: 30px;
+			   a{color: white;font-family: 'Montserrat';font-size: 16px;}
+		   }
+		  
+		   img{width: 20px;height: 20px;}
+		.tags{background-color: #A80E0E;height: 90px;display: flex;width: 400px;align-items: center;justify-content: space-around;;}
+		}
+		}
+		.banner-info{position: absolute;top: 250px;padding-left: 300px;text-align: left;;
+		 img{display: list-item;;position: absolute;width: 40%;height: 132px;top: 130px;left: 210px;}
+		  h1{font-size: 96px;z-index: 10;}
+         
+		  p{position: absolute;font-size: 30px;font-family: 'Montserrat-Bold';height: 132px;width: 782px;z-index: 100;padding-top: 50px;;
+		   span{font-size: 30px;display: block;}
+		 }
+		  a{margin-left: 0;margin-top: 20%;;
+		   #arrow{width: 20px;height: 20px;position: absolute;top: 10px;left: 130px;object-fit: contain;}
+		}
+		
+	}
+	.bottom{bottom: -30;}
+	.bottom{width: 100%;height: 61px;position: absolute;}
+	}
+}
+
+
+.slick-slide img {width: 100%;height: 100%;z-index: 1;}
+
+
+
+
+.slick-next:before {
+	color:white;
+	font-size: 60px;
+    position: absolute;
+    left: -95px;
+}
+.slick-prev:before{position: absolute;
+    color:rgb(255, 255, 255);
+	left:80px;
+	font-size:60px;
+}
+
+
+
+.slick-prev{
+	display: block !important;
+	position: relative;
+	z-index:700;
+
+}
+
+
+
+
+
+
+.specials{height: 700px;background-image: url(/img/specials.png);background-repeat: no-repeat;background-size: contain;color: white;@include center();position: relative;;
+	img{width: 100%;position: absolute;top: -12px;}
+	#bottom{position: absolute;bottom: 5px;}
+.countdown-main{padding-left: 130px;
+	h1{font-size: 60px;font-family: 'Avengeance';padding-bottom: 22px;}
+	p{font-size: 22px;font-family: 'Montserrat-ExtraLight';padding-bottom: 5px;}
+	p:last-of-type{padding-bottom: 27px;}
+
+	.countdown{
+		.timer{margin: 15px;text-align: center;;
+			span{background-color: #FFAA00;@include center();justify-content: center;height: 85px;width: 85px;font-size: 47px;font-family: 'Avengeance';}
+			p{height: 85px;width: 85px;font-size: 17px;font-family: 'Avengeance';padding-top: 8px;}
+			
+		}
+	}
+}
+
+}
+
+
+
+
+.want-to-eat{text-align: center;padding-bottom: 150px;padding-top: 100px;;
+	  h2{font-size: 50px;padding-bottom: 13px;font-family: 'Avengeance';}
+	  .brush{margin-bottom: 14px;width: 377px;height: 13px;}
+	  p{font-size: 20px;font-family: 'Montserrat-ExtraLight';margin-bottom: 72px;}
+
+	  .container{@include center();justify-content: space-between;;
+		  .inner{padding: 0;box-shadow: none;margin: 0;width: 150px;;
+			  p{font-family: 'Montserrat-Regular';font-size:18px ;margin-top:43px;}
+		  }
+
+		  .inner:hover{width: 248px;height: 236px;box-shadow: 1px 3px 2px 2px rgb(170, 170, 170);padding: 50px;; }
+	  }
+  }
+
+.delivery{position: relative;background-color: #FFAA00;height: 800px;;
+ .top,.bottom{width: 100%;height: 61px;position: absolute;}
+ .top{top: -20;}
+ .bottom{bottom: -2;;}
+ .center{position: absolute;height: 229px;width: 750px;right: 0;top: 270px;}
+ .man{width: 808px;height: 790px;}
+ h3{font-size: 47px;font-family: 'Avengeance';color: white;position: absolute;top: 340px;left: 55%;
+   span{display: block;}
+}
+p{font-size: 20px;position: absolute;top: 510px;width: 448px;color: white;left: 55%;}
+ 
+}
+
+
+.recipes{padding-top: 126px;
+	.container{
+		.row{
+			.col-md-4{
+				.card{width: 350px;border: none;box-shadow: 2px 4px 6px rgb(207, 207, 207);margin-bottom: 50px;border-radius: 20px 20px 0 0;
+					
+					img{height: 230px;object-fit: cover;border-radius: 20px 20px 0 0;;position: relative;}
+					.shape{position: absolute;;height: 10px;top: 220px;width: 350px;}
+					.info{display: flex;flex-wrap: wrap;padding:36px 0 36px 36;;
+						i{color: #FFAA00;}
+						span{margin-left: 30px;}
+						h4{width: 100%;font-size: 22px;margin: 16px 0 12px 0;}
+						p{width: 100%;padding-bottom: 30px;font-size: 16px;font-family: 'Montserrat-ExtraLight';}
+						.price{width: 190px;padding-top: 10px;font-size: 22px;font-family: 'Avengeance Mightiest Avenger';}
+					  a{width: 154px;height: 40px;color: white;background-color: #FFAA00;border-radius: 50px;@include center();
+					  img{width: 16px;height: 11px;margin: 0 11px 0 17px;}
+					}
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+.testimonials{text-align: center;padding-top: 107px;overflow-x: hidden;padding-bottom: 155px;;
+	h3{font-size: 40px;font-family: 'Avengeance';color: #A80E0E;}
+	.brush{margin-bottom: 14px;width: 377px;height: 13px;}
+	p{padding-bottom: 80px;font-size: 20px;}
+	.inner{text-align: left;position: relative;display: flex;;
+		.red{width: 400px;height: 250px;margin-bottom: -120px;margin-left: 80px;}
+		.woman{width: 500px;height: 480px;position: absolute;top: 0;left: 200px;object-fit: contain;}
+
+		.info{padding-top: 80px;
+			img{width: 70px;height: 60px;margin-bottom: 40px;}
+			p{font-size: 20px;font-family: 'Montserrat-ExtraLight';padding-bottom: 53px;}
+			h4{display: flex;width: 340px;padding-bottom: 10px;font-size: 25px;justify-content: space-between;;
+			 .line{width: 58px;height: 2px;;background-color: #A80E0E;}
+			}
+			span{font-size: 16px;font-family: 'Montserrat-ExtraLight';}
+		}
+	}
+}
+
+
+.services{background-color: #FFAA00;position: relative;padding: 187px 0 150px 0;;;
+	.brush{position: absolute;height: 71px;top: -15px;width: 100%;}
+	.container{
+		.row{
+			.col-md-3{
+				.card{height: 316px;text-align: center;padding: 36px 15px 0 15px;border-radius: 8px;border: none;;
+					img{width: 66px;height: 73px;margin: 0 auto;}
+					h4{padding: 13px 0 18px 0;font-size: 20px;}
+					#line{width: 70px;height: 3px;background-color: #FFAA00;margin: 0 auto;}
+					p{font-size: 16px;font-family: 'Montserrat-ExtraLight';text-transform: lowercase;padding-top: 16px;}
+					
+				}
+			}
+		}
+	}
+
+}
+
+
+.contacts{display: flex;position: relative;
+	.inner{background-color: #A80E0E;color: white;;padding-left: 235px;padding-top: 106px;width: 50%;
+	font-family: 'Montserrat-ExtraLight';
+		.call{padding: 10px 25px 10px 25px ;background-color: #FFAA00;border-radius: 50px;font-size: 16px;font-family: 'Montserrat-ExtraLight';}
+		h3{font-size: 40px;font-family: 'Avengeance';padding: 15px 0 21px 0;}
+		.day{height: 70px;display: flex;flex: wrap;align-items: center;;width: 416px;;
+			img{width: 60px;height: 60px;}
+			p{padding-left: 30px;}
+			span{display: block;padding-top: 5px;}
+		}
+		#day{padding-bottom: 29px;border-bottom: 1px solid rgba(255, 255, 255, 0.212);margin-bottom: 30px;}
+
+		.icons{width: 211px;;display: flex;justify-content: space-between;padding-top: 50px;;
+		  a{background-color: white;width: 57px;height: 54px;@include center();justify-content: center;border-radius: 5px;;;
+		   img{width: 28px;height: 23px;}
+		}
+		}
+
+	}
+	.map{width: 50%;height: 637px;}
+	#location{position: absolute;width: 61px;height: 88px;top: 40%;right: 305px;;}
+	#logo{position: absolute;width: 41px;height: 41px;top: 43%;right: 320px;}
+}
+
+
+footer{padding-top: 98px;
+	.container{
+		.row{
+			h4{color: #A80E0E;font-size: 20px;font-family: 'Avengeance';padding-bottom: 30px;}
+			hr{width:50px;background-color: #FFAA00;height: 3px;position: absolute;top: 20px;left: 10px;}
+			.col-md-5{
+				.inner{display: flex;flex-wrap: wrap;;;
+					.logo{width: 149px;height: 103px;margin-bottom: 32px;}
+					p{font-size: 16px;padding-bottom: 16px;;}
+					#logs{width: 49px;height: 49px;margin-right: 10px;}
+
+				}
+			}
+			.col-md-3{
+				
+				.links{display: flex;flex-wrap: wrap;justify-content: space-between;position: relative;;;
+					h4{width: 100%;}
+					// hr{position: absolute;}
+					.inner{width: 100px;display: flex;flex-direction: column;;
+					 a{font-size: 16px;color: #686868;font-family: '';}
+					}
+					
+				}
+			}
+			.col-md-4{
+			 .gallary{display: flex;flex-wrap: wrap;justify-content: space-between;position: relative;;
+				hr{top: -33;}
+			   img{width: 100px;height: 93px;border-radius: 15px;margin-bottom: 40px;;}
+			}
+			}
+		}
+	}
+}
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
